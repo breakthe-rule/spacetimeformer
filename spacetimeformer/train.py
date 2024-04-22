@@ -7,7 +7,9 @@ import uuid
 
 import pytorch_lightning as pl
 import torch
-
+import torch
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print("Device: ", device)
 import spacetimeformer as stf
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
