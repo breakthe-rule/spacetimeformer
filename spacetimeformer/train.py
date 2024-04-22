@@ -852,15 +852,6 @@ def main(args):
     )
 
     # Train
-    # Move model to GPU
-    if torch.cuda.is_available():
-        trainer = trainer.cuda()
-
-    # Move input data and target to GPU
-    # if torch.cuda.is_available():
-    #     input_data = input_data.cuda()
-    #     target = target.cuda()
-
     trainer.fit(forecaster, datamodule=data_module)
 
     # Test
